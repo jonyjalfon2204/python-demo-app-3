@@ -7,7 +7,7 @@ pipeline {
         stage('Build'){
           steps{
             container('dind'){
-              sh  'docker build -f ./python-demo-app-3/python-app-B/Dockerfile -t jonyjalfon94/python-demo-app-3:$BUILD_NUMBER ./python-demo-app-3/python-app-B/'
+              sh  'docker build -f ./python-app-B/Dockerfile -t jonyjalfon94/python-demo-app-3:$BUILD_NUMBER ./python-app-B/'
             }
           }
         }
